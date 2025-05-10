@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const apiUrl =
     customApiUrl ||
     (window.netlifyEnv && window.netlifyEnv.API_URL) ||
-    "https://bioflow-2.onrender.com"; // Production URL
+    "https://bioflow-cbc.onrender.com"; // Production URL
 
   // Add a button to allow changing the API URL
   const headerRight = document.querySelector(".header-right");
