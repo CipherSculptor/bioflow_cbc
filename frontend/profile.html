@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioFlow - Profile</title>
+    <link rel="stylesheet" href="profile.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/logo.png" alt="BioFlow Logo">
+            </div>
+            <div class="profile-container">
+                <div class="profile" id="profileButton">
+                    <img src="assets/profile.png" alt="Profile">
+                    <span>Profile</span>
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="profile.html">Profile</a>
+                    <a href="details.html">Details</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="index.html">Logout</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="profile-details-container">
+            <div class="profile-card">
+                <div class="profile-header">
+                    <img src="assets/profile.png" alt="Profile Picture" class="profile-picture">
+                    <h1>Profile Details</h1>
+                </div>
+                <div class="profile-info">
+                    <div class="info-group">
+                        <label>Name:</label>
+                        <span id="profileName">-</span>
+                    </div>
+                    <div class="info-group">
+                        <label>Age:</label>
+                        <span id="profileAge">-</span>
+                    </div>
+                    <div class="info-group">
+                        <label>Gender:</label>
+                        <span id="profileGender">-</span>
+                    </div>
+                    <div class="info-group">
+                        <label>Permittivity Value:</label>
+                        <span id="profilePermittivity">-</span>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button class="edit-btn" onclick="window.location.href='details.html'">Edit Details</button>
+                    <button class="back-btn" onclick="window.location.href='dashboard.html'">Back to Dashboard</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="profile.js"></script>
+</body>
+</html>

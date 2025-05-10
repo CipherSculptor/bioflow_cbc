@@ -1,0 +1,14 @@
+[build]
+  publish = "/"
+  command = "echo 'No build command'"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[context.production.environment]
+  API_URL = "https://bioflow-2.onrender.com"
+
+[context.deploy-preview.environment]
+  API_URL = "https://bioflow-2.onrender.com"

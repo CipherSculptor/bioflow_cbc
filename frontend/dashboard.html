@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioFlow - Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="netlify-env.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/logo.png" alt="BioFlow Logo">
+            </div>
+            <div class="profile-container">
+                <div class="profile" id="profileButton">
+                    <img src="assets/profile.png" alt="Profile">
+                    <span id="user-display-name">Profile</span>
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="details.html">Details</a>
+                    <a href="#" id="logout-button">Logout</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="form-container">
+            <form id="evaluationForm">
+                <input type="text" id="userName" placeholder="Enter your Name" required>
+                <input type="number" id="userAge" placeholder="Enter your Age" min="1" max="120" required>
+
+                <div class="select-wrapper">
+                    <select id="userGender" required>
+                        <option value="" disabled selected>Enter your Gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <input type="number" id="userPermittivity" placeholder="Enter your Permittivity Value (24.8-25.4)"
+                       step="0.001" min="24.8" max="25.4" required>
+                <div class="help-text">For accurate predictions, use permittivity values between 24.8 and 25.4</div>
+
+                <button type="submit" class="evaluate-btn">Evaluate</button>
+            </form>
+        </main>
+    </div>
+    <script src="firebase-config.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>

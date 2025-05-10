@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioFlow - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="netlify-env.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="assets/logo.png" alt="BioFlow Logo">
+        </div>
+        <div class="login-container">
+            <h1>Welcome to BioFlow</h1>
+            <h2>Login</h2>
+            <div id="login-status" class="notification" style="display: none;"></div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email Id" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="sign-in-btn">Sign In</button>
+            </form>
+            <div class="links">
+                <a href="#" class="forgot-password">Forgot Password ?</a>
+                <div class="signup-link">
+                    <span>or</span>
+                    <a href="signup.html" class="signup">SignUp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="firebase-config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

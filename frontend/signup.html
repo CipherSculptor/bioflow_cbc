@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioFlow - Sign Up</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="netlify-env.js"></script>
+    <!-- Firebase SDK -->
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.22.0/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="assets/logo.png" alt="BioFlow Logo">
+        </div>
+        <div class="login-container signup-container">
+            <h1>Create Account</h1>
+            <div id="signup-status" class="notification" style="display: none;"></div>
+            <form id="signupForm">
+                <div class="input-group">
+                    <input type="text" id="displayName" placeholder="Full Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email Id" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+                </div>
+                <button type="submit" class="sign-in-btn">Sign Up</button>
+            </form>
+            <div class="links">
+                <div class="login-link">
+                    <span>Already have an account?</span>
+                    <a href="index.html" class="login">Login</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="firebase-config.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html>

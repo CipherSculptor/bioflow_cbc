@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioFlow - Results</title>
+    <link rel="stylesheet" href="results.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="netlify-env.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="assets/logo.png" alt="BioFlow Logo">
+            </div>
+            <div class="profile-container">
+                <div class="profile" id="profileButton">
+                    <img src="assets/profile.png" alt="Profile">
+                    <span>Profile</span>
+                </div>
+                <div class="profile-dropdown" id="profileDropdown">
+                    <a href="profile.html">Profile</a>
+                    <a href="details.html">Details</a>
+                    <a href="dashboard.html">Dashboard</a>
+                    <a href="index.html">Logout</a>
+                </div>
+            </div>
+        </header>
+
+        <main class="results-container">
+            <div class="results-card">
+                <h1>RESULTS</h1>
+
+                <div class="result-group">
+                    <label>Name</label>
+                    <input type="text" id="resultName" readonly>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-group half">
+                        <label>Age</label>
+                        <input type="text" id="resultAge" readonly>
+                    </div>
+                    <div class="result-group half">
+                        <label>Gender</label>
+                        <input type="text" id="resultGender" readonly>
+                    </div>
+                </div>
+
+                <div class="result-group">
+                    <label>Hemoglobin (HGB)</label>
+                    <input type="text" id="resultHemoglobin" readonly>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-group half">
+                        <label>RBC Count</label>
+                        <input type="text" id="resultRBCCount" readonly>
+                    </div>
+                    <div class="result-group half">
+                        <label>WBC Count</label>
+                        <input type="text" id="resultWBCCount" readonly>
+                    </div>
+                </div>
+
+                <div class="result-group">
+                    <label>Platelets Count</label>
+                    <input type="text" id="resultPlateletsCount" readonly>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-group half">
+                        <label>Hematocrit (PCV)</label>
+                        <input type="text" id="resultPCV" readonly>
+                    </div>
+                    <div class="result-group half">
+                        <label>Mean Cell Volume (MCV)</label>
+                        <input type="text" id="resultMCV" readonly>
+                    </div>
+                </div>
+
+                <div class="result-row">
+                    <div class="result-group half">
+                        <label>Mean Cell Hemoglobin (MCH)</label>
+                        <input type="text" id="resultMCH" readonly>
+                    </div>
+                    <div class="result-group half">
+                        <label>MCHC</label>
+                        <input type="text" id="resultMCHC" readonly>
+                    </div>
+                </div>
+
+                <div class="result-group">
+                    <label>Red Cell Distribution Width (RDW)</label>
+                    <input type="text" id="resultRDW" readonly>
+                </div>
+
+                <div class="button-row">
+                    <button class="go-back-btn" onclick="window.location.href='dashboard.html'">Go Back</button>
+                    <button class="pdf-btn" onclick="generatePDF()">PDF</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="results.js"></script>
+</body>
+</html>
